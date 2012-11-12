@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Original URL</th>
+    <th>Short URL</th>
+  </tr>
+  <% @urls.each do |url| %>
+    <tr>
+      <td><%= url.original_url %></td>
+      <td><%= link_to "http://localhost:3000/#{url.short_url}", "/#{url.short_url}" %></td>
+    </tr>
+  <% end %>
+</table>

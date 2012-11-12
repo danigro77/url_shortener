@@ -1,0 +1,7 @@
+<%= form_for @url do |f|%>
+  <% @url.errors.full_messages.each do |msg| %>
+    <p><%= msg %></p>
+  <% end %>
+  <%= f.text_field :original_url %>
+  <%= f.submit "Shorten URL"%>
+<% end %>
